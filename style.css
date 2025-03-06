@@ -1,84 +1,122 @@
 :root {
-    --Green: hsl(75, 94%, 57%);
-    --White: hsl(0, 0%, 100%);
-    --Grey-300: hsl(0, 0%, 85%);
-    --Grey-700: hsl(0, 0%, 20%);
-    --Grey-800: hsl(0, 0%, 12%);
-    --Grey-900: hsl(0, 0%, 8%);
-  }
-  
-  * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-  }
-  body {
-    background: var(--Grey-900);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-300: hsl(0, 0%, 85%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--Grey-900);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile {
+  border-radius: 10px;
+  background: var(--Grey-800);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile header {
+  display: flex;
+  justify-content: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description h2 {
+  color: var(--White);
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.description p:nth-child(2) {
+  color: var(--Green);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.description p:nth-child(3) {
+  color: var(--Grey-300);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.button-section {
+  width: 100%;
+}
+
+.button-section button {
+  width: 100%;
+  height: 45px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background-color: var(--Grey-700);
+  color: var(--White);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-section button:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+}
+
+@media (min-width: 768px) {
   .profile {
-    border-radius: 10px;
-    background: var(--Grey-800);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 89%;
-  
-    padding: 0px 15px;
-    height: 71%;
+      padding: 40px;
   }
-  .profile header {
-    display: flex;
-    justify-content: center;
-  }
+
   .profile img {
-    border-radius: 100%;
-    height: 95px;
-    margin: 10px 0px 30px 0px;
+      width: 120px;
+      height: 120px;
   }
-  .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   .description h2 {
-    color: var(--White);
-    font-weight: 500;
-    font-style: normal;
-    font-size: 26px;
+      font-size: 28px;
   }
-  .description p:nth-child(2) {
-    color: var(--Green);
-    font-size: 14px;
-    font-weight: bold;
-    font-style: normal;
-    margin: 10px 0px 30px 0px;
-  }
+
+  .description p:nth-child(2),
   .description p:nth-child(3) {
-    color: var(--Grey-300);
-    font-size: 14px;
-    font-weight: 400px;
-    font-style: normal;
-    margin: 0px 0px 15px 0px;
+      font-size: 16px;
   }
-  .button-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .button-section button {
-    height: 50px;
-    margin: 8px 5px;
-    border-radius: 10px;
-    background-color: var(--Grey-700);
-    color: var(--White);
-    font-size: 15px;
-    font-weight: 600;
-    border: 0;
+      height: 50px;
+      font-size: 16px;
   }
+}
